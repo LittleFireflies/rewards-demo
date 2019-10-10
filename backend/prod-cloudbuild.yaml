@@ -4,4 +4,4 @@ steps:
   args: ['install']
 - name: 'gcr.io/cloud-builders/gcloud'
   dir: 'backend'
-  args: ['app', 'deploy']
+  args: ['app', 'deploy', 'prod-app.yaml']

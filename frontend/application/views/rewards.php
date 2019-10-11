@@ -21,6 +21,7 @@
 <body>
     <div class="container">
         <h1>Dicoding Rewards - <?php if (ENVIRONMENT !== 'production') echo ENVIRONMENT; ?></h1>
+        <h2><?php echo $_SERVER["HTTP_HOST"]; ?></h2>
         <div class="row" id="reward-items">
             <?php foreach($rewards as $reward) { ?>
             <div class="col-4">

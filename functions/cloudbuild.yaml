@@ -9,6 +9,6 @@ steps:
       '--runtime',
       'nodejs8',
       '--trigger-topic',
-      'cloud-build'
+      'cloud-builds'
     ]
     dir: 'functions'

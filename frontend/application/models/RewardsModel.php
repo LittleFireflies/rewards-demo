@@ -9,7 +9,7 @@ class RewardsModel extends CI_model {
         if (ENVIRONMENT === 'production') {
             $this->BASE_URL = "https://rewards-api-jreg6tctjq-an.a.run.app";
         } else {
-            $this->BASE_URL = "https://staging-rewards-api-jreg6tctjq-an.a.run.app/rewards";
+            $this->BASE_URL = "https://staging-rewards-api-jreg6tctjq-an.a.run.app";
         }
         $this->client = new Client([
             'base_uri' => $this->BASE_URL,

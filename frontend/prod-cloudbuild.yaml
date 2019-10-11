@@ -1,7 +1,4 @@
 steps:
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['install']
-    dir: 'frontend'
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy', 'prod-app.yaml']
     dir: 'frontend'

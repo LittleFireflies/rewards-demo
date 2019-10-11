@@ -20,8 +20,7 @@
 
 <body>
     <div class="container">
-        <h1>Dicoding Rewards - <?php if (ENVIRONMENT !== 'production') echo ENVIRONMENT; ?></h1>
-        <h2><?php echo $_SERVER["HTTP_HOST"]; ?></h2>
+        <h1>Dicoding Rewards <?php if (ENVIRONMENT !== 'production') echo " - " . ENVIRONMENT; ?></h1>
         <div class="row" id="reward-items">
             <?php foreach($rewards as $reward) { ?>
             <div class="col-4">
@@ -32,7 +31,7 @@
                         <p class="card-text"><?php echo $reward["points"]; ?> points</p>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-secondary">Redeem</a>
+                        <button type="button" class="btn btn-secondary" <?php if(!$reward["available"]) echo "disabled"; ?>>Redeem</button>
                     </div>
                 </div>
             </div>

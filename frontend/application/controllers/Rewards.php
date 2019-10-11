@@ -13,7 +13,6 @@ class Rewards extends CI_Controller {
 	public function index()
 	{
 		$data['rewards'] = $this->rewardsModel->getRewards();
-		$data['server'] = $_SERVER["HTTP_HOST"];
 		$this->load->view('rewards', $data);
 	}
 }

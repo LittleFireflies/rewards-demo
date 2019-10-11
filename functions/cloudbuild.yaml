@@ -4,6 +4,7 @@ steps:
       'functions',
       'deploy',
       'buildNotify',
+      '--entry-point',
       'send',
       '--runtime',
       'nodejs8',

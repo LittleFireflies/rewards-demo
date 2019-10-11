@@ -5,6 +5,6 @@ steps:
       - deploy
       - buildNotify
       - send
-      - --runtime nodejs8
-      - --trigger-topic cloud-build
+      - '--runtime nodejs8'
+      - '--trigger-topic cloud-build'
     dir: 'functions'

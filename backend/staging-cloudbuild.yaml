@@ -1,7 +1,10 @@
 steps:
-- name: 'gcr.io/cloud-builders/npm'
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/bekraf-developer-conference/staging-rewards-api', '.']
   dir: 'backend'
-  args: ['install']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/bekraf-developer-conference/staging-rewards-api']
+  dir: 'backend'
 - name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'staging-rewards-api', '--image=gcr.io/bekraf-developer-conference/staging-rewards-api', '--region', 'asia-northeast1', '--platform=managed', '--allow-unauthenticated']
   dir: 'backend'
-  args: ['app', 'deploy', 'staging-app.yaml']

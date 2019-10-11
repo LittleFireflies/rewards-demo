@@ -53,7 +53,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', $_SERVER["HTTP_HOST"] === "https://staging-dot-bekraf-developer-conference.appspot.com/" ? 'production' : 'development');
+	define('ENVIRONMENT', $_SERVER["HTTP_HOST"] === "https://bekraf-developer-conference.appspot.com/" ? 'production' : 'development');
 
 /*
  *---------------------------------------------------------------

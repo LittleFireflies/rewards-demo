@@ -1,5 +1,4 @@
 steps:
-steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/bekraf-developer-conference/rewards-api', '.']
   dir: 'backend'

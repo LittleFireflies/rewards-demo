@@ -4,6 +4,9 @@ steps:
   args: ['build', '-t', 'gcr.io/bekraf-developer-conference/rewards-api', '.']
   dir: 'backend'
 - name: 'gcr.io/cloud-builders/docker'
+  args: ['run', 'gcr.io/bekraf-developer-conference/rewards-api', 'npm', 'run', 'test']
+  dir: 'backend'
+- name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/bekraf-developer-conference/rewards-api']
   dir: 'backend'
 - name: 'gcr.io/cloud-builders/gcloud'

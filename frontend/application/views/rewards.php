@@ -31,7 +31,7 @@
                         <p class="card-text"><?php echo $reward["points"]; ?> points</p>
                     </div>
                     <div class="card-footer">
-                        <button type="button" class="btn btn-primary" <?php if(!$reward["available"]) echo "disabled"; ?>>Redeem</button>
+                        <button type="button" class="btn btn-secondary" <?php if(!$reward["available"]) echo "disabled"; ?>>Redeem</button>
                     </div>
                 </div>
             </div>
